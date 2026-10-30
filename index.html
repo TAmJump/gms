@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>株式会社GMS</title>
+<meta name="description" content="株式会社GMSは、医療施設・介護施設の企画運営と経営支援、病院・訪問看護の立上げと運営管理を行う会社です。">
+<meta property="og:title" content="株式会社GMS">
+<meta property="og:description" content="医療施設・介護施設の企画運営と経営支援、病院・訪問看護の立上げと運営管理">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gms.115en.com/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+:root{
+  --bg:#ffffff; --fg:#111111; --muted:#6b6b6b; --line:#e3e3e3; --soft:#f6f6f6; --accent:#d4001a;
+  --en:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --jp:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",sans-serif;
+  --side:max(20px,4vw);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.9 var(--jp);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.inner{max-width:1200px;margin:0 auto;padding-left:max(var(--side),env(safe-area-inset-left,0px));padding-right:max(var(--side),env(safe-area-inset-right,0px))}
+/* header */
+header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .inner{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.logo{font-family:var(--en);font-weight:800;font-size:24px;letter-spacing:.02em;text-decoration:none;display:flex;align-items:baseline;gap:10px}
+.logo small{font-family:var(--jp);font-weight:500;font-size:12px;color:var(--muted);letter-spacing:.04em}
+nav{display:flex;gap:28px}
+nav a{font-family:var(--en);font-weight:700;font-size:13px;letter-spacing:.12em;text-decoration:none;position:relative;padding:4px 0}
+nav a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:2px;background:var(--accent);transition:right .25s}
+nav a:hover::after,nav a:focus-visible::after{right:0}
+/* hero */
+.hero{padding-block:clamp(72px,12vw,150px) clamp(56px,8vw,110px);border-bottom:1px solid var(--line)}
+.hero h1{margin:0;font-family:var(--en);font-weight:800;font-size:clamp(72px,17vw,220px);line-height:.88;letter-spacing:-.03em}
+.hero h1 span{color:var(--accent)}
+.hero .lead{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 48px;margin-top:clamp(28px,4vw,48px);align-items:end}
+.hero .lead p{margin:0}
+.hero .name{font-size:clamp(20px,2.4vw,28px);font-weight:700;letter-spacing:.04em}
+.hero .desc{color:var(--muted);font-size:15px}
+/* sections */
+section.block{padding-block:clamp(72px,10vw,128px);border-bottom:1px solid var(--line)}
+.head{display:grid;grid-template-columns:auto minmax(0,1fr);gap:24px 64px;margin-bottom:clamp(36px,5vw,56px)}
+.head h2{margin:0;font-family:var(--en);font-weight:800;font-size:clamp(40px,6vw,72px);line-height:1;letter-spacing:-.02em}
+.head .jp{display:block;font-family:var(--jp);font-size:13px;font-weight:500;color:var(--muted);letter-spacing:.12em;margin-top:12px}
+.head p{margin:0;align-self:end;max-width:40em;color:var(--fg)}
+/* business */
+.biz{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--fg)}
+.biz article{padding:28px 28px 32px 0;border-bottom:1px solid var(--line);min-width:0}
+.biz article+article{padding-left:28px;border-left:1px solid var(--line)}
+.biz article:nth-child(3n+1){padding-left:0;border-left:0}
+.biz .no{font-family:var(--en);font-weight:700;font-size:13px;color:var(--accent);letter-spacing:.1em}
+.biz h3{margin:10px 0 10px;font-size:19px;line-height:1.5;font-weight:700}
+.biz p{margin:0;font-size:14.5px;color:var(--muted);line-height:1.85}
+/* company */
+dl.table{margin:0;border-top:1px solid var(--fg)}
+dl.table div{display:grid;grid-template-columns:220px minmax(0,1fr);gap:8px 32px;padding:22px 0;border-bottom:1px solid var(--line)}
+dl.table dt{font-weight:700;font-size:14.5px}
+dl.table dd{margin:0;font-size:15px}
+dl.table ul{margin:0;padding-left:1.1em}
+dl.table li{margin:2px 0}
+/* contact */
+.contact{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;border-top:1px solid var(--fg)}
+.contact>div{padding:28px 28px 28px 0;border-bottom:1px solid var(--line);min-width:0}
+.contact>div+div{padding-left:28px;border-left:1px solid var(--line)}
+.contact .lbl{font-family:var(--en);font-weight:700;font-size:13px;letter-spacing:.12em;color:var(--muted)}
+.contact .val{font-size:clamp(18px,2.2vw,24px);font-weight:700;margin-top:6px;word-break:break-all}
+.contact .val a{text-decoration:none;border-bottom:2px solid var(--accent)}
+.copy{font:inherit;font-size:12px;margin-top:10px;padding:4px 12px;border:1px solid var(--fg);background:var(--bg);color:var(--fg);cursor:pointer}
+/* footer */
+footer{padding-block:40px}
+footer .inner{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:baseline}
+footer .logo{font-size:20px}
+footer small{font-family:var(--en);font-size:12px;color:var(--muted);letter-spacing:.06em}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+@media (max-width:860px){
+  .head{grid-template-columns:1fr}
+  .biz{grid-template-columns:1fr}
+  .biz article,.biz article+article{padding:24px 0;border-left:0}
+  dl.table div{grid-template-columns:1fr;gap:4px}
+  .contact{grid-template-columns:1fr}
+  .contact>div,.contact>div+div{padding:24px 0;border-left:0}
+  .hero .lead{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .logo small{display:none}
+  nav{gap:16px}
+  nav a{font-size:12px;letter-spacing:.08em}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}nav a::after{transition:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="inner">
+    <a class="logo" href="#top" aria-label="株式会社GMS トップへ">GMS<small>株式会社GMS</small></a>
+    <nav aria-label="メインメニュー">
+      <a href="#business">BUSINESS</a>
+      <a href="#company">COMPANY</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="inner">
+      <h1>GMS<span>.</span></h1>
+      <div class="lead">
+        <p class="name">株式会社GMS</p>
+        <p class="desc">医療施設・介護施設の企画運営と経営支援、病院・訪問看護の立上げと運営管理を行っています。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="business">
+    <div class="inner">
+      <div class="head">
+        <h2>BUSINESS<span class="jp">事業内容</span></h2>
+        <p>医療機関・介護事業所の開設、運営、経営改善を受託しています。</p>
+      </div>
+      <div class="biz">
+        <article>
+          <div class="no">01</div>
+          <h3>病院・訪問看護の立上げと運営管理</h3>
+          <p>病院・訪問看護ステーションの開設準備、行政手続き、採用、運営体制づくりから、開設後の運営管理までを受託します。</p>
+        </article>
+        <article>
+          <div class="no">02</div>
+          <h3>医療・介護施設の企画運営と経営支援</h3>
+          <p>医療施設・介護施設・健康増進施設の企画運営と、経営改善・事業再生のコンサルティングを行います。</p>
+        </article>
+        <article>
+          <div class="no">03</div>
+          <h3>医療事務・請求事務の代行</h3>
+          <p>医療事務、診療報酬・介護報酬の請求事務、病医院の経理事務を代行します。</p>
+        </article>
+        <article>
+          <div class="no">04</div>
+          <h3>M&amp;A・事業承継の支援</h3>
+          <p>医療・介護事業の合併・買収・売却・再生に関するコンサルティングを行います。</p>
+        </article>
+        <article>
+          <div class="no">05</div>
+          <h3>医療・介護のシステム開発</h3>
+          <p>医療・介護・福祉分野の情報提供、システムの企画・開発・販売と、それに伴う事務処理を行います。</p>
+        </article>
+        <article>
+          <div class="no">06</div>
+          <h3>研修・人材育成</h3>
+          <p>介護者育成のための研修・講習・教育を行います。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="company">
+    <div class="inner">
+      <div class="head">
+        <h2>COMPANY<span class="jp">会社概要</span></h2>
+      </div>
+      <dl class="table">
+        <div><dt>商号</dt><dd>株式会社GMS</dd></div>
+        <div><dt>設立</dt><dd>2015年7月28日</dd></div>
+        <div><dt>代表者</dt><dd>代表取締役　後藤 基温</dd></div>
+        <div><dt>資本金</dt><dd>200万円</dd></div>
+        <div><dt>所在地</dt><dd>〒176-0013<br>東京都練馬区豊玉中三丁目7番5号</dd></div>
+        <div><dt>事業内容</dt><dd><ul>
+          <li>病院・訪問看護ステーションの立上げと運営管理</li>
+          <li>医療施設・介護施設の企画運営、経営コンサルティング</li>
+          <li>医療事務・診療報酬請求事務・病医院経理事務の代行</li>
+          <li>医療・介護事業の合併・買収・再生に関するコンサルティング</li>
+          <li>医療・介護・福祉分野のシステムの企画・開発・販売</li>
+          <li>介護者育成のための研修・講習・教育</li>
+        </ul></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="block" id="contact">
+    <div class="inner">
+      <div class="head">
+        <h2>CONTACT<span class="jp">お問い合わせ</span></h2>
+        <p>ご相談・お問い合わせは、メールにてお受けしています。</p>
+      </div>
+      <div class="contact">
+        <div>
+          <div class="lbl">MAIL</div>
+          <div class="val"><a href="mailto:info@115en.com" id="mail">info@115en.com</a></div>
+          <button class="copy" type="button" id="copyMail">アドレスをコピー</button>
+        </div>
+        <div>
+          <div class="lbl">ADDRESS</div>
+          <div class="val" style="font-size:clamp(16px,1.8vw,19px)">〒176-0013<br>東京都練馬区豊玉中三丁目7番5号</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="inner">
+    <a class="logo" href="#top">GMS</a>
+    <small>&copy; 2026 GMS Inc.</small>
+  </div>
+</footer>
+<script>
+document.getElementById('copyMail').addEventListener('click',function(){
+  var b=this,t='info@115en.com';
+  function done(){b.textContent='コピーしました';setTimeout(function(){b.textContent='アドレスをコピー';},1800);}
+  if(navigator.clipboard){navigator.clipboard.writeText(t).then(done).catch(function(){var r=document.createRange();r.selectNodeContents(document.getElementById('mail'));var s=getSelection();s.removeAllRanges();s.addRange(r);});}
+});
+</script>
+</body>
+</html>
