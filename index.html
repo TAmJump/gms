@@ -56,6 +56,17 @@ section.block{padding-block:clamp(72px,10vw,128px);border-bottom:1px solid var(-
 .biz .no{font-family:var(--en);font-weight:700;font-size:13px;color:var(--accent);letter-spacing:.1em}
 .biz h3{margin:10px 0 10px;font-size:19px;line-height:1.5;font-weight:700}
 .biz p{margin:0;font-size:14.5px;color:var(--muted);line-height:1.85}
+/* real estate */
+.re{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:24px 48px;margin-top:clamp(40px,5vw,64px);padding-top:28px;border-top:1px solid var(--fg)}
+.re h3{margin:0;font-size:19px;line-height:1.5}
+.re h3 small{display:block;font-family:var(--en);font-weight:700;font-size:13px;letter-spacing:.1em;color:var(--accent);margin-bottom:6px}
+.re p{margin:12px 0 0;font-size:14.5px;color:var(--muted)}
+.re ul{margin:0;padding:0;list-style:none;border-top:1px solid var(--line)}
+.re li a{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 16px;align-items:center;padding:18px 0;border-bottom:1px solid var(--line);text-decoration:none}
+.re li b{font-size:16px}
+.re li span{grid-column:1;font-size:13.5px;color:var(--muted)}
+.re li i{grid-column:2;grid-row:1/span 2;display:grid;place-items:center;width:40px;height:40px;border:1px solid var(--fg);border-radius:50%;font-style:normal;transition:background .3s,color .3s,border-color .3s}
+.re li a:hover i,.re li a:focus-visible i{background:var(--accent);border-color:var(--accent);color:#fff}
 /* company */
 dl.table{margin:0;border-top:1px solid var(--fg)}
 dl.table div{display:grid;grid-template-columns:220px minmax(0,1fr);gap:8px 32px;padding:22px 0;border-bottom:1px solid var(--line)}
@@ -85,6 +96,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
   .contact{grid-template-columns:1fr}
   .contact>div,.contact>div+div{padding:24px 0;border-left:0}
   .hero .lead{grid-template-columns:1fr}
+  .re{grid-template-columns:1fr}
 }
 @media (max-width:560px){
   .logo small{display:none}
@@ -154,6 +166,14 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
           <h3>研修・人材育成</h3>
           <p>介護者育成のための研修・講習・教育を行います。</p>
         </article>
+      </div>
+      <div class="re" id="realestate">
+        <div><h3><small>REAL ESTATE</small>医療・介護施設の開発と承継</h3>
+        <p>開発用地・医療介護施設・事業承継（M&amp;A）の案件を掲載しています。非公開案件は会員登録と物件ごとの秘密保持契約のうえでご案内します。</p></div>
+        <ul>
+          <li><a href="https://develop.115en.com/" target="_blank" rel="noopener"><b>開発・M&amp;A 案件サイト</b><span>掲載中の開発案件・M&amp;A案件、介護・医療施設の開発シミュレーション</span><i aria-hidden="true">&rarr;</i></a></li>
+          <li><a href="https://develop.115en.com/lp-mci.html" target="_blank" rel="noopener"><b>建設コスト根拠ツール</b><span>その建築費が高いか安いか、8つの指標から確かめる</span><i aria-hidden="true">&rarr;</i></a></li>
+        </ul>
       </div>
     </div>
   </section>
