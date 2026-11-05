@@ -205,16 +205,16 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
     <div class="inner">
       <div class="head">
         <h2>CONTACT<span class="jp">お問い合わせ</span></h2>
-        <p>ご相談・お問い合わせは、メールにてお受けしています。</p>
+        <p>ご相談・お問い合わせは、下記のフォームからお送りください。</p>
       </div>
       <div class="contact">
         <div>
-          <div class="lbl">MAIL</div>
-          <div class="val"><a href="mailto:info@115en.com" id="mail">info@115en.com</a></div>
-          <button class="copy" type="button" id="copyMail">アドレスをコピー</button>
+          <div class="tj-contact" data-project="gms" data-accent="#d4001a"></div>
         </div>
         <div>
-          <div class="lbl">ADDRESS</div>
+          <div class="lbl">MAIL</div>
+          <div class="val"><a href="mailto:info@115en.com">info@115en.com</a></div>
+          <div class="lbl" style="margin-top:28px">ADDRESS</div>
           <div class="val" style="font-size:clamp(16px,1.8vw,19px)">〒176-0013<br>東京都練馬区豊玉中三丁目7番5号</div>
         </div>
       </div>
@@ -228,13 +228,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
     <small>&copy; 2026 GMS Inc.</small>
   </div>
 </footer>
-<script>
-document.getElementById('copyMail').addEventListener('click',function(){
-  var b=this,t='info@115en.com';
-  function done(){b.textContent='コピーしました';setTimeout(function(){b.textContent='アドレスをコピー';},1800);}
-  if(navigator.clipboard){navigator.clipboard.writeText(t).then(done).catch(function(){var r=document.createRange();r.selectNodeContents(document.getElementById('mail'));var s=getSelection();s.removeAllRanges();s.addRange(r);});}
-});
-</script>
+<script src="https://115en.com/js/contact-form.js" defer></script>
 <!-- 115en-nav -->
 <nav aria-label="グループナビ" style="position:fixed;left:max(14px,env(safe-area-inset-left,0px));bottom:max(14px,env(safe-area-inset-bottom,0px));z-index:9998;display:flex;gap:6px;font:700 11.5px/1 'Archivo','Helvetica Neue',Arial,sans-serif;letter-spacing:.08em">
 <a href="https://115en.com/#enter" onclick="if(history.length>1&&document.referrer){event.preventDefault();history.back();}" style="display:inline-flex;align-items:center;gap:6px;padding:9px 14px;background:#fff;color:#111;border:1px solid #111;border-radius:999px;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.08)">&larr; 戻る</a>
